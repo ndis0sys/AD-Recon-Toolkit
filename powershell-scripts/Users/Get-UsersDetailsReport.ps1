@@ -5,8 +5,6 @@
     Скрипт берёт список учёток из текстового файла и выводит ключевые атрибуты:
     LastLogon, LastLogonTimestamp, AccountEnabled, PasswordLastSet, PasswordNeverExpires, Description.
     Выгрузка производится в CSV.
-.NOTES
-    Подходит для AD-Recon, аудита и анализа пользователей.
 #>
 
 Import-Module ActiveDirectory
