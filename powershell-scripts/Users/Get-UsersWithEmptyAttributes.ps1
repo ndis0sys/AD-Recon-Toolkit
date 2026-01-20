@@ -1,15 +1,8 @@
 <#
 .SYNOPSIS
-Finds Active Directory users with empty attributes.
-
+    Находит пользователей AD с пустыми атрибутами.
 .DESCRIPTION
-This script retrieves AD users and identifies accounts
-with missing or empty attributes (e.g. Description, Phone Number).
-
-.NOTES
-Author: ndis0sys
-Based on publicly available PowerShell AD audit examples.
-Read-only. No changes are made to AD.
+    Этот скрипт извлекает пользователей AD и идентифицирует учетные записи с отсутствующими или пустыми атрибутами (например, описание, номер телефона).
 #>
 
 Import-Module ActiveDirectory
