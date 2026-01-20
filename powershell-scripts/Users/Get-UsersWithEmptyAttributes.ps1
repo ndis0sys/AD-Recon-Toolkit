@@ -26,18 +26,19 @@ ForEach($Item in $List){
 
     if ($User) {
         $hItemDetails = "FullName: $Item | UserName: $($User.SamAccountName) | Email: $($User.mail) | Tel: $($User.telephoneNumber)"
-        # Добавляем в массив
-        $aResults += $hItemDetails
     } else {
-        $aResults += "FullName: $Item | Not found in AD"
+        $hItemDetails = "FullName: $Item | Not found in AD"
     }
+
+    # Добавляем строку в массив результатов
+    $aResults += $hItemDetails
 }
 
 # Путь к папке "Документы" текущего пользователя
 $DocumentsPath = [Environment]::GetFolderPath("MyDocuments")
 $OutputFile = Join-Path $DocumentsPath "Results.txt"
 
-# Сохраняем в текстовый файл
+# Сохраняем результаты в текстовый файл
 $aResults | Out-File -FilePath $OutputFile -Encoding UTF8
 
 Write-Host "Результаты сохранены в $OutputFile"
