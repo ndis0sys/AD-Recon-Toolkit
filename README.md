@@ -29,12 +29,12 @@
 Каждый каталог содержит PowerShell-скрипты, ориентированные на анализ конкретного типа объектов.
 
 powershell-scripts/
-├── ACL/
-├── Computers/
-├── Domain/
-├── Groups/
-├── Users/
-├── Utils/
+├── ACL/                  # Скрипты для анализа и аудита ACL, делегирования, прав доступа
+├── Computers/            # Анализ компьютерных объектов, неактивных машин, локальных админов
+├── Domain/               # Доменные политики, Kerberoasting, delegation, GPO, security posture
+├── Groups/               # Аудит групп, nested groups, privileged groups (Domain Admins и т.д.)
+├── Users/                # Пользователи: hygiene, stale accounts, weak passwords, contractors
+└── Utils/                # Общие утилиты: парсинг, экспорт в CSV/JSON, вспомогательные функции
 
 ### 🔐 ACL/
 
